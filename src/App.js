@@ -1,56 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import MainLayout from './components/MainLayout';
+import Home from './pages/Home';
+import AddTutor from './pages/AddTutor';
+import ReserveForm from './pages/ReserveForm';
+import Reservation from './pages/Reservation';
+import DeleteTutor from './pages/DeleteTutor';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
+import ReserveTutor from './pages/ReserveTutor';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/add-tutor" element={<AddTutor />} />
+          <Route path="/reserve-tutor" element={<ReserveForm />} />
+          <Route path="/reservation" element={<Reservation />} />
+          <Route path="/delete-tutor" element={<DeleteTutor />} />
+          <Route path="/type-reserve" element={<ReserveTutor />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

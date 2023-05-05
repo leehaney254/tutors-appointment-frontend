@@ -1,13 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
     monospace;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.ant-layout-sider {
+  background-color: white !important;
+  color: black !important;
+}
+
+.ant-menu {
+  background-color: white !important;
+  color: black !important;
+}
+
+.ant-menu-item {
+  background-color: white !important;
+  color: black !important;
+  align-items: center !important;
+}
+
+.ant-menu-item:hover {
+  background-color: #97bf11 !important;
+  color: white !important;
+}
+
+.ant-menu-item-active {
+  background-color: #97bf11 !important;
+  color: white !important;
+}
+
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    width: min-content !important;
+  }
 }
