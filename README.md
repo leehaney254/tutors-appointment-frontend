@@ -1,46 +1,100 @@
-# Getting Started with Create React App and Redux
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Blog Project
 
-## Available Scripts
+This is ruby on rails project that has users, comment, likes and post
 
-In the project directory, you can run:
 
-### `npm start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Ruby on rails
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
+To get a local copy up and running follow these simple example steps.
 
-### `npm test`
+## Prerequisites
+- Have a good knowledge on how to parse UI designs
+- Have VSCode or other text editor installed. [Link to download VSCode](https://code.visualstudio.com/download)
+- Install node package. [Link to download node](https://nodejs.org/en/download/)
+- Have git installed.[Link to download git](https://git-scm.com/downloads)
+- Create a github repository.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Install
+Install all project dependencies by running the command below
+```
+ $ bundle install
 
-### `npm run build`
+ $ bin/rails server
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ $ http://localhost:3000/
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Error check
+```
+$ rubocop .
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-Follow the HTML-CSS linter confuguration to docs to setup linters [Link to Microverse linter docs](https://github.com/microverseinc/linters-config)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Run tests
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For tracking linters errors locally, you need to follow these steps:
+- For tracking linter errors in HTML file run:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```Ruby
+ruboc
+```
+```javascript
+npx hint .
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- For tracking linter errors in CSS file run:
+```javascript
+npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+```
 
-## Learn More
+```javascript
+npx stylelint "**/*.{css,scss}"
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- For tracking linter errors in Javascript and React file run:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```javascript
+npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
+```
+```javascript
+npx eslint .
+```
+
+## Deployment
+
+- Use GitHub pages to deploy website
+- For more information about publishing sources, see [About github pages](https://pages.github.com/)
+
+## Authors
+
+ **Josphat Kiploman**
+
+- GitHub: [@Josphat205](https://github.com/Josphat205) 
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/josphatloman/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you liked this project!
+
+## Acknowledgments
+
+- Microverse 
+- Coding Partners
+- Code Reviewers
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
