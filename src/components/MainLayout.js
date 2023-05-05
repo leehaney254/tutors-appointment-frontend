@@ -3,13 +3,18 @@ import {
   MenuUnfoldOutlined,
   UploadOutlined,
   UserOutlined,
-  VideoCameraOutlined
-} from "@ant-design/icons";
-import Logo from "../assets/logo1.png";
-import { Outlet, useNavigate } from "react-router-dom";
-import { Button, Layout, Menu, theme } from "antd";
-import { useState } from "react";
-import { BsFacebook, BsTwitter, BsLinkedin, BsWhatsapp } from "react-icons/bs";
+  VideoCameraOutlined,
+} from '@ant-design/icons';
+import { Outlet, useNavigate } from 'react-router-dom';
+import {
+  Button, Layout, Menu, theme,
+} from 'antd';
+import { useState } from 'react';
+import {
+  BsFacebook, BsTwitter, BsLinkedin, BsWhatsapp,
+} from 'react-icons/bs';
+import Logo from '../assets/logo1.png';
+
 const { Header, Sider, Content } = Layout;
 const MainLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -29,80 +34,79 @@ const MainLayout = () => {
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={["1"]}
+          defaultSelectedKeys={['1']}
           onClick={({ key }) => navigate(key)}
           items={[
             {
-              key: "",
+              key: '',
               icon: <UserOutlined />,
-              label: "Home"
+              label: 'Home',
             },
             {
-              key: "add-tutor",
+              key: 'add-tutor',
               icon: <VideoCameraOutlined />,
-              label: "Add Tutor"
+              label: 'Add Tutor',
             },
             {
-              key: "reserve-tutor",
+              key: 'reserve-tutor',
               icon: <UploadOutlined />,
-              label: "Reserve Tutor"
+              label: 'Reserve Tutor',
             },
             {
-              key: "reservation",
+              key: 'reservation',
               icon: <UserOutlined />,
-              label: "Reservation"
+              label: 'Reservation',
             },
             {
-              key: "delete-tutor",
+              key: 'delete-tutor',
               icon: <VideoCameraOutlined />,
-              label: "Delete Tutor"
+              label: 'Delete Tutor',
             },
             {
-              key: "type-reserve",
+              key: 'type-reserve',
               icon: <UploadOutlined />,
-              label: "Type Reserve"
-            }
+              label: 'Type Reserve',
+            },
           ]}
         />
         <div
           className={`absolute bottom-5 w-full ${collapsed
-            ? "hidden"
-            : "flex"}`}
+            ? 'hidden'
+            : 'flex'}`}
         >
           <Menu
-            className={`flex w-full justify-center items-center md:flex-row flex-col  `}
+            className="flex w-full justify-center items-center md:flex-row flex-col  "
             theme="dark"
             mode="inline"
-            defaultSelectedKeys={["1"]}
+            defaultSelectedKeys={['1']}
             onClick={({ key }) => navigate(key)}
             items={[
               {
-                key: "facebook",
+                key: 'facebook',
                 icon: <BsFacebook />,
-                label: "Fb"
+                label: 'Fb',
               },
               {
-                key: "twitter",
+                key: 'twitter',
                 icon: <BsTwitter />,
-                label: "Twitter"
+                label: 'Twitter',
               },
               {
-                key: "linkedin",
+                key: 'linkedin',
                 icon: <BsLinkedin />,
-                label: "Linkedin"
+                label: 'Linkedin',
               },
               {
-                key: "whatapp",
+                key: 'whatapp',
                 icon: <BsWhatsapp />,
-                label: "Whatapp,"
-              }
+                label: 'Whatapp,',
+              },
             ]}
           />
         </div>
         <div
-          div
           className={`absolute bottom-2 w-full justify-center items-center left-3 
-          ${collapsed ? "hidden" : "flex"}`}
+          ${collapsed ? 'hidden' : 'flex'}`}
         >
           <span className="text-center text-black">
             @2023 copy rights reserved
@@ -113,7 +117,7 @@ const MainLayout = () => {
         <Header
           style={{
             padding: 0,
-            background: "#fff"
+            background: '#fff',
           }}
         >
           <Button
@@ -121,18 +125,18 @@ const MainLayout = () => {
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
             onClick={() => setCollapsed(!collapsed)}
             style={{
-              fontSize: "16px",
+              fontSize: '16px',
               width: 64,
-              height: 64
+              height: 64,
             }}
           />
         </Header>
         <Content
           style={{
-            margin: "24px 16px",
+            margin: '24px 16px',
             padding: 24,
-            minHeight: "calc(100vh - 112px)",
-            background: colorBgContainer
+            minHeight: 'calc(100vh - 112px)',
+            background: colorBgContainer,
           }}
         >
           <Outlet />

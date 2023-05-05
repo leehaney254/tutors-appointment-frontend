@@ -1,7 +1,5 @@
-import React from "react";
+import React from 'react';
 
-const SingleTutor = () => {
-  return <div>Single tutor page</div>;
-};
+const SingleTutor = () => <div>Single tutor page</div>;
 
 export default SingleTutor;

@@ -1,7 +1,5 @@
-import React from "react";
+import React from 'react';
 
-const DeleteTutor = () => {
-  return <div>Delete tutor page</div>;
-};
+const DeleteTutor = () => <div>Delete tutor page</div>;
 
 export default DeleteTutor;

@@ -1,7 +1,5 @@
-import React from "react";
+import React from 'react';
 
-const ReserveTutor = () => {
-  return <div>Reserve tutor page</div>;
-};
+const ReserveTutor = () => <div>Reserve tutor page</div>;
 
 export default ReserveTutor;

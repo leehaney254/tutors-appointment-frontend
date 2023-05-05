@@ -1,7 +1,5 @@
-import React from "react";
+import React from 'react';
 
-const ReserveForm = () => {
-  return <div>Reserve form</div>;
-};
+const ReserveForm = () => <div>Reserve form</div>;
 
 export default ReserveForm;

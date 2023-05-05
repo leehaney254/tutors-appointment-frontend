@@ -1,15 +1,15 @@
-import React from "react";
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
-import MainLayout from "./components/MainLayout";
-import Home from "./pages/Home";
-import AddTutor from "./pages/AddTutor";
-import ReserveForm from "./pages/ReserveForm";
-import Reservation from "./pages/Reservation";
-import DeleteTutor from "./pages/DeleteTutor";
-import Login from "./pages/auth/Login";
-import Register from "./pages/auth/Register";
-import ReserveTutor from "./pages/ReserveTutor";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import MainLayout from './components/MainLayout';
+import Home from './pages/Home';
+import AddTutor from './pages/AddTutor';
+import ReserveForm from './pages/ReserveForm';
+import Reservation from './pages/Reservation';
+import DeleteTutor from './pages/DeleteTutor';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
+import ReserveTutor from './pages/ReserveTutor';
+
 function App() {
   return (
     <div className="App">

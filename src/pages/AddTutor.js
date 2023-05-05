@@ -1,7 +1,5 @@
-import React from "react";
+import React from 'react';
 
-const AddTutor = () => {
-  return <div>Add tutor page</div>;
-};
+const AddTutor = () => <div>Add tutor page</div>;
 
 export default AddTutor;
