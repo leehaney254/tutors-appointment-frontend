@@ -53,6 +53,13 @@ code {
      width: min-content !important;
   }
 }
+
+@media (max-width: 480px){
+  .ant-layout-sider{
+      width: 0px !important;
+      
+  }
+}
   
 
 
