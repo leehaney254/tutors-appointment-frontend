@@ -64,6 +64,10 @@ code {
   color: white !important;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .ant-layout-sider {
     width: min-content !important;
