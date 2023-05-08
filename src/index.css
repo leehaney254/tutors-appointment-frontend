@@ -68,12 +68,6 @@ code {
   display: none;
 }
 
-/* For IE, Edge and Firefox */
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
 @media (max-width: 768px) {
   .ant-layout-sider {
     width: min-content !important;
