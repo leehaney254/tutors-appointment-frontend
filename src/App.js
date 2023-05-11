@@ -21,7 +21,14 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="" element={<PrivateRouting><MainLayout /></PrivateRouting>}>
+        <Route
+          path=""
+          element={(
+            <PrivateRouting>
+              <MainLayout />
+            </PrivateRouting>
+          )}
+        >
           <Route index element={<Home />} />
           <Route path="/add-tutor" element={<AddTutor />} />
           <Route path="/reserve-tutor" element={<ReserveForm />} />
