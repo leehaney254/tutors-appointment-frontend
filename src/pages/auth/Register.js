@@ -1,16 +1,19 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import toast from 'react-hot-toast';
+import { registerUser } from '../../features/RegisterSlice';
 
 const Register = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const registerData = useSelector((state) => state.register);
   const [data, setData] = useState({
-    username: '',
-    email: '',
+    name: '',
     password: '',
     cpassword: '',
   });
-  const {
-    username, email, password, cpassword,
-  } = data;
+  const { name, password, cpassword } = data;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,6 +22,27 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (name === '' || password === '' || cpassword === '') {
+      toast.error('Please fill all the fields');
+    }
+    if (password !== cpassword) {
+      toast.error('Password does not match');
+    }
+    const finalData = {
+      name,
+      password,
+    };
+    dispatch(registerUser(finalData));
+    if (registerData.isRegistered) {
+      toast.success("You're registered successfully");
+      navigate('/login');
+    }
+
+    setData({
+      name: '',
+      password: '',
+      cpassword: '',
+    });
   };
   return (
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
@@ -29,36 +53,21 @@ const Register = () => {
         <form className="mt-6" onSubmit={handleSubmit}>
           <div className="mb-2">
             <label
-              htmlFor="username"
+              htmlFor="name"
               className="block text-sm font-semibold text-gray-800"
             >
               Username
             </label>
             <input
-              id="username"
+              id="name"
               type="text"
               className="block w-full px-4 py-2 mt-2 text-slate-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              name="username"
-              value={username}
+              name="name"
+              value={name}
               onChange={handleChange}
             />
           </div>
-          <div className="mb-2">
-            <label
-              htmlFor="email"
-              className="block text-sm font-semibold text-gray-800"
-            >
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              value={email}
-              onChange={handleChange}
-              type="email"
-              className="block w-full px-4 py-2 mt-2 text-slate-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-            />
-          </div>
+
           <div className="mb-2">
             <label
               htmlFor="password"

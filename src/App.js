@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 import MainLayout from './components/MainLayout';
 import Home from './pages/Home';
 import AddTutor from './pages/AddTutor';
@@ -15,6 +16,7 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <div className="App">
+      <Toaster />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
