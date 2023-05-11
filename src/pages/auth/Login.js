@@ -1,13 +1,12 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [data, setData] = useState({
     username: '',
     password: '',
   });
-  const {
-    username, password,
-  } = data;
+  const { username, password } = data;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -65,6 +64,15 @@ const Login = () => {
               Login Now
             </button>
           </div>
+          <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
+            Don't have an account?
+            <Link
+              to="/register"
+              className="text-danger transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"
+            >
+              Register here
+            </Link>
+          </p>
         </form>
       </div>
     </div>
