@@ -1,12 +1,18 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import toast from 'react-hot-toast';
+import { loginUser } from '../../features/LoginSlice';
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const loginData = useSelector((state) => state.login);
   const [data, setData] = useState({
-    username: '',
+    name: '',
     password: '',
   });
-  const { username, password } = data;
+  const { name, password } = data;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,8 +21,21 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Login successfuly');
+    if (name === '' || password === '') {
+      toast.error('Please fill all the fields');
+    }
+
+    dispatch(loginUser(data));
+    toast.success("You're login successfully");
+
+    window.localStorage.setItem('token', loginData.loginUser.token);
+    navigate('/');
+    setData({
+      name: '',
+      password: '',
+    });
   };
+
   return (
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
       <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring ring-2 ring-green-600 lg:max-w-xl">
@@ -26,17 +45,17 @@ const Login = () => {
         <form className="mt-6" onSubmit={handleSubmit}>
           <div className="mb-2">
             <label
-              htmlFor="username"
+              htmlFor="name"
               className="block text-sm font-semibold text-gray-800"
             >
               Username
             </label>
             <input
-              id="username"
+              id="name"
               type="text"
               className="block w-full px-4 py-2 mt-2 text-slate-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              name="username"
-              value={username}
+              name="name"
+              value={name}
               onChange={handleChange}
             />
           </div>
