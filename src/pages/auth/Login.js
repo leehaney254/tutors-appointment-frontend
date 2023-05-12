@@ -27,7 +27,6 @@ const Login = () => {
 
     dispatch(loginUser(data));
     toast.success("You're login successfully");
-
     window.localStorage.setItem('token', loginData.loginUser.token);
     navigate('/');
     setData({
