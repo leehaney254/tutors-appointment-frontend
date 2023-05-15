@@ -1,3 +1,3 @@
-const Url = 'http://localhost:3000/';
+const Url = 'https://tutors-backend.onrender.com/';
 
 export default Url;
