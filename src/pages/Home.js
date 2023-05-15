@@ -1,10 +1,18 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { GrNext, GrPrevious } from 'react-icons/gr';
-import AllData from './TutorData';
+import { useSelector, useDispatch } from 'react-redux';
 import CardFeature from '../components/CardFeature';
+import { getTutors } from '../features/TutorSlice';
 
 const Home = () => {
   const userefTarget = useRef();
+
+  const dispatch = useDispatch();
+  const tutors = useSelector((state) => state.tutor.data);
+
+  useEffect(() => {
+    dispatch(getTutors());
+  }, []);
   const next = () => {
     userefTarget.current.scrollLeft += 240;
   };
@@ -40,15 +48,15 @@ const Home = () => {
         ref={userefTarget}
         className="flex  items-center mx-2 md:scale-90 mt-2 gap-4 overflow-scroll scrollbar-none scroll-smooth scrollbar-hide  transition-all"
       >
-        {AllData[0]
-          && AllData.map((product) => (
+        {tutors[0]
+          && tutors.map((product) => (
             <CardFeature
               key={product.id}
               id={product.id}
               name={product.name}
               speciality={product.speciality}
-              bio={product.Bio}
-              price={product.Price}
+              bio={product.bio}
+              price={product.price}
               image={product.image}
               className="md:w-1/2"
             />
