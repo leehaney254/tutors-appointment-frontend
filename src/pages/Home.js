@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getTutors());
-  }, []);
+  }, [dispatch]);
   const next = () => {
     userefTarget.current.scrollLeft += 240;
   };

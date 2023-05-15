@@ -33,6 +33,7 @@ const AddTutor = () => {
       toast.error('Fields should not be empty');
     }
     dispatch(createTutor(inputData));
+    toast.success("Created successfully");
   };
 
   return (
