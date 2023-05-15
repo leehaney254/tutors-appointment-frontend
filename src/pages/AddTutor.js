@@ -13,7 +13,7 @@ const AddTutor = () => {
   });
 
   const dispatch = useDispatch();
-  const message = useSelector((state) => state.tutor);
+  const message = useSelector((state) => state.tutor.message);
 
   const {
     name, image, speciality, bio, price,
@@ -33,7 +33,7 @@ const AddTutor = () => {
       toast.error('Fields should not be empty');
     }
     dispatch(createTutor(inputData));
-    toast.success("Created successfully");
+    toast.success(message);
   };
 
   return (
