@@ -1,9 +1,9 @@
-import jwt_decode from 'jwt-decode';
+import * as JWT from 'jwt-decode';
 
 const ValidateToken = (token) => {
   try {
-    const decoded = jwt_decode(token);
-    const currentTime = Date.now() / 1000;
+    const decoded = JWT(token);
+    const currentTime = Date.now() / 20000;
     if (decoded.exp < currentTime) {
       // Token has expired
       return false;

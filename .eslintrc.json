@@ -19,6 +19,7 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "react/prop-types": "off",
+    "react/camelcase": "off",
     "react/no-unescaped-entities": 0,
     "no-shadow": "off",
     "camelcase": "off",
