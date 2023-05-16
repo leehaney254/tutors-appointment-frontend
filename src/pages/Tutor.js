@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTutor } from '../features/SingleTutorSlice';
+import TutorCard from '../components/TutorCard';
 
 const Tutor = () => {
   const { id } = useParams();
@@ -18,44 +19,17 @@ const Tutor = () => {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="max-w-md p-4 space-y-4">
-        <h1 className="text-center text-2xl font-bold">Tutor Details</h1>
-        <div className="flex items-center space-x-4">
-          <div className="w-[300px] h-[300px]">
-            <img
-              src={tutor.image}
-              alt={tutor.name}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div>
-            <p className="text-green-600 font-bold text-lg capitalize">
-              {tutor.name}
-            </p>
-            <p className="text-slate-600 font-medium text-base">
-              Speciality:
-              {' '}
-              {tutor.speciality}
-            </p>
-            <p className="text-slate-600 font-medium text-base">
-              Bio:
-              {' '}
-              {tutor.bio}
-            </p>
-            <p className="text-green-700 font-bold text-base">
-              Price:
-              {' '}
-              {tutor.price}
-            </p>
-            <button
-              type="button"
-              className="mt-4 bg-green-600 text-white px-4 py-2 rounded-md text-lg"
-            >
-              Reservation
-            </button>
-          </div>
-        </div>
+    <div className="flex  justify-center items-center">
+      <div className="w-full mt-4">
+        <h1 className="text-center text-base md:text-2xl font-bold">Tutor Details</h1>
+        <TutorCard
+          id={tutor.id}
+          name={tutor.name}
+          image={tutor.image}
+          speciality={tutor.speciality}
+          bio={tutor.bio}
+          price={tutor.price}
+        />
       </div>
     </div>
   );
