@@ -21,10 +21,7 @@ export const getTutor = createAsyncThunk(
           Authorization: `Bearer ${token}`,
         },
       };
-      const { data } = await axios.get(
-        `${Url}api/v1/tutors/${parseInt(id)}`,
-        config,
-      );
+      const { data } = await axios.get(`${Url}api/v1/tutors/${id}`, config);
 
       return data;
     } catch (error) {

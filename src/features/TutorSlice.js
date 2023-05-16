@@ -28,7 +28,7 @@ export const createTutor = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.response.data);
     }
-  }
+  },
 );
 
 export const getTutors = createAsyncThunk(
@@ -47,7 +47,7 @@ export const getTutors = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.response.data);
     }
-  }
+  },
 );
 
 const tutorSlice = createSlice({
