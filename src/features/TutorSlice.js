@@ -7,6 +7,7 @@ const initialState = {
   data: [],
   message: '',
   error: null,
+  tutor: {},
 };
 
 const token = localStorage.getItem('token');
