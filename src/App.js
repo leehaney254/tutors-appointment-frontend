@@ -12,6 +12,7 @@ import Register from './pages/auth/Register';
 import ReserveTutor from './pages/ReserveTutor';
 import PrivateRouting from './components/PrivateRouting';
 import NotFound from './pages/NotFound';
+import Tutor from './pages/Tutor';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         >
           <Route index element={<Home />} />
           <Route path="/add-tutor" element={<AddTutor />} />
+          <Route path="/tutors/:id" element={<Tutor />} />
           <Route path="/reserve-tutor" element={<ReserveForm />} />
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/delete-tutor" element={<DeleteTutor />} />
