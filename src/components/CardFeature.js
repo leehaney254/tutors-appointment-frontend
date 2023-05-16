@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import getTutor from '../features/SingleTutorSlice';
-// import { useDispatch, useSelector } from 'react-redux';
 
 const CardFeature = ({
   // eslint-disable-next-line react/prop-types
