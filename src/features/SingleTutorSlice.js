@@ -27,7 +27,7 @@ export const getTutor = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.response.data);
     }
-  },
+  }
 );
 
 const singleTutorSlice = createSlice({
