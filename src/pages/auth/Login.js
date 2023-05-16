@@ -1,18 +1,16 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { useDispatch } from 'react-redux';
 import { loginUser } from '../../features/LoginSlice';
 
 const Login = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [data, setData] = useState({
     name: '',
     password: '',
   });
   const { name, password } = data;
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData((prev) => ({ ...prev, [name]: value }));
@@ -23,10 +21,8 @@ const Login = () => {
     if (name === '' || password === '') {
       toast.error('Please fill all the fields');
     }
-
     dispatch(loginUser(data));
     toast.success("You're login successfully");
-    navigate('/');
     setData({
       name: '',
       password: '',
@@ -39,7 +35,7 @@ const Login = () => {
         <h3 className="text-2xl font-semibold text-center text-green-500 underline uppercase decoration-wavy">
           Login form
         </h3>
-        <form className="mt-6" onSubmit={handleSubmit}>
+        <form className="mt-6">
           <div className="mb-2">
             <label
               htmlFor="name"
@@ -74,6 +70,7 @@ const Login = () => {
           </div>
           <div className="mt-6">
             <button
+              onClick={handleSubmit}
               type="submit"
               className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-green-500 rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600"
             >

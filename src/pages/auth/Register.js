@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
 import { registerUser } from '../../features/RegisterSlice';
 
 const Register = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const registerData = useSelector((state) => state.register);
   const [data, setData] = useState({
     name: '',
     password: '',
@@ -33,11 +32,8 @@ const Register = () => {
       password,
     };
     dispatch(registerUser(finalData));
-    if (registerData.isRegistered) {
-      toast.success("You're registered successfully");
-      navigate('/login');
-    }
-
+    toast.success("You're registered successfully");
+    navigate('/login');
     setData({
       name: '',
       password: '',

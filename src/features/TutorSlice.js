@@ -50,6 +50,25 @@ export const getTutors = createAsyncThunk(
   },
 );
 
+export const deleteTutor = createAsyncThunk(
+  'Tutor/getTutor',
+  async (id, { rejectWithValue }) => {
+    try {
+      const config = {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      const { data } = await axios.delete(`${Url}api/v1/tutors/${id}`, config);
+
+      return data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  },
+);
+
 const tutorSlice = createSlice({
   name: 'tutor',
   initialState,
@@ -81,6 +100,21 @@ const tutorSlice = createSlice({
       error: null,
     }),
     [getTutors.rejected]: (state, action) => ({
+      ...state,
+      loading: false,
+      error: action.payload.error,
+    }),
+    [deleteTutor.pending]: (state) => ({
+      ...state,
+      loading: true,
+    }),
+    [deleteTutor.fulfilled]: (state, action) => ({
+      ...state,
+      loading: false,
+      message: action.payload.message,
+      error: null,
+    }),
+    [deleteTutor.rejected]: (state, action) => ({
       ...state,
       loading: false,
       error: action.payload.error,
