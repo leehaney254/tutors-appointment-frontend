@@ -4,7 +4,6 @@ import loginReducer from '../features/LoginSlice';
 import tutorReducer from '../features/TutorSlice';
 import singleTutorReducer from '../features/SingleTutorSlice';
 
-
 export default configureStore({
   reducer: {
     register: registerReducer,
