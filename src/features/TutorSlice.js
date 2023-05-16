@@ -28,7 +28,7 @@ export const createTutor = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.response.data);
     }
-  },
+  }
 );
 
 export const getTutors = createAsyncThunk(
@@ -47,29 +47,7 @@ export const getTutors = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.response.data);
     }
-  },
-);
-
-export const getTutor = createAsyncThunk(
-  'Tutor/getTutor',
-  async (id, { rejectWithValue }) => {
-    try {
-      const config = {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-      };
-      const { data } = await axios.get(
-        `${Url}api/v1/tutors/${parseInt(id)}`,
-        config,
-      );
-
-      return data;
-    } catch (error) {
-      return rejectWithValue(error.response.data);
-    }
-  },
+  }
 );
 
 const tutorSlice = createSlice({
@@ -103,21 +81,6 @@ const tutorSlice = createSlice({
       error: null,
     }),
     [getTutors.rejected]: (state, action) => ({
-      ...state,
-      loading: false,
-      error: action.payload.error,
-    }),
-    [getTutor.pending]: (state) => ({
-      ...state,
-      loading: true,
-    }),
-    [getTutor.fulfilled]: (state, action) => ({
-      ...state,
-      loading: false,
-      tutor: action.payload,
-      error: null,
-    }),
-    [getTutor.rejected]: (state, action) => ({
       ...state,
       loading: false,
       error: action.payload.error,
