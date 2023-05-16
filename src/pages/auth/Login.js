@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
 import { loginUser } from '../../features/LoginSlice';
 
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const loginData = useSelector((state) => state.login);
   const [data, setData] = useState({
     name: '',
     password: '',
@@ -27,7 +26,6 @@ const Login = () => {
 
     dispatch(loginUser(data));
     toast.success("You're login successfully");
-    window.localStorage.setItem('token', loginData.loginUser.token);
     navigate('/');
     setData({
       name: '',

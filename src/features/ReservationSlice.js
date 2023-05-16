@@ -29,6 +29,25 @@ export const reserveTutor = createAsyncThunk(
   },
 );
 
+export const reservedTutors = createAsyncThunk(
+  'reserved/reservedTutors',
+  async (id, { rejectWithValue }) => {
+    try {
+      const config = {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      };
+
+      const { data } = await axios.get(`${Url}api/v1/reservations`, id, config);
+      return data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  },
+);
+
 const reservedTutorSlice = createSlice({
   name: 'reserved',
   initialState,
@@ -45,6 +64,21 @@ const reservedTutorSlice = createSlice({
       error: null,
     }),
     [reserveTutor.rejected]: (state, action) => ({
+      ...state,
+      loading: false,
+      error: action.payload.error,
+    }),
+    [reservedTutors.pending]: (state) => ({
+      ...state,
+      loading: true,
+    }),
+    [reservedTutors.fulfilled]: (state, action) => ({
+      ...state,
+      loading: false,
+      data: action.payload,
+      error: null,
+    }),
+    [reservedTutors.rejected]: (state, action) => ({
       ...state,
       loading: false,
       error: action.payload.error,
