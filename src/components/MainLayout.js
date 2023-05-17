@@ -33,10 +33,10 @@ const MainLayout = () => {
         trigger={null}
         collapsible
         collapsed={collapsed}
-        className="bg-slate-200"
+        className="bg-slate-300"
       >
         <div className="logo flex justify-start items-center">
-          <img src={Logo} alt="logo" className="w-24 h-24" />
+          <img src={Logo} alt="logo" className="w-24 h-24 hero" />
         </div>
         <Menu
           theme="dark"
@@ -72,9 +72,7 @@ const MainLayout = () => {
           ]}
         />
         <div
-          className={`absolute bottom-5 w-full ${collapsed
-            ? 'hidden'
-            : 'flex'}`}
+          className={`absolute bottom-5 w-full ${!collapsed ? 'flex justify-center items-center' : 'md:hidden'}`}
         >
           <Menu
             className="flex w-full justify-center items-center md:flex-row flex-col  "

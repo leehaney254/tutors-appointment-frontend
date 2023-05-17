@@ -12,12 +12,12 @@ const Reservation = () => {
 
   const ReservationData = useSelector((state) => state.reservedTutor.data);
   return (
-    <div className="">
+    <div className=" scale-90">
       <h1 className="md:text-3xl text-base font-bold mb-4 text-green-600">My Reservation</h1>
-      <div className="flex md:flex-row flex-col gap-3">
+      <div className="flex  gap-3 overflow-auto scrollbar-thin scrollbar-thumb-blue-700 scrollbar-track-blue-300">
         {ReservationData ? ReservationData.map(({
-          id, name, date, image,
-        }) => <ReservationCard key={id} name={name} date={date} image={image} />)
+          id, name, date, image, price,
+        }) => <ReservationCard key={id} name={name} price={price} date={date} image={image} />)
           : <div><h2>No Reserved Tutor</h2></div>}
       </div>
     </div>

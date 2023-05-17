@@ -73,3 +73,31 @@ code {
     width: min-content !important;
   }
 }
+@media (max-width: 640px) {
+  .ant-layout-sider {
+    width: min-content !important;
+    max-width: 100px !important;
+    min-width: 100px !important;
+    width: 80px !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .ant-menu-title-content{
+    font-size: 9px !important;
+  }
+}
+@media (max-width: 414px) {
+  .ant-layout-sider {
+    width: min-content !important;
+    max-width: 40px !important;
+    min-width: 40px !important;
+    width: 40px !important;
+    
+  }
+  .ant-menu-item{
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 50px !important;
+  }
+}
+

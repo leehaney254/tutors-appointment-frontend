@@ -23,10 +23,10 @@ const Home = () => {
   return (
     <div className="">
       <div className="flex flex-col justify-center items-center mb-5">
-        <h1 className="md:text-3xl text-base font-bold text-green-600">
+        <h1 className="md:text-2xl font-sans text-base font-bold text-green-600">
           Tutors
         </h1>
-        <hr className="md:w-28 w-24 md:border-2 border-1 border-green-600" />
+        <hr className="md:w-28 w-16 md:border-2 border-1 border-green-600" />
       </div>
       <div className=" w-full h-54 items-center relative">
         <button

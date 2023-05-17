@@ -12,7 +12,7 @@ const CardFeature = ({
       <p className=" text-green-600 font-bold text-lg capitalize">{name}</p>
       <p className=" text-slate-600 font-medium text-sm">{speciality}</p>
       <p className=" text-green-700 font-bold text-xs">
-        KES
+        $
         <span className="text-black">
           {' '}
           {price}
