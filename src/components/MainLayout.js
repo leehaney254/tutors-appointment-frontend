@@ -20,6 +20,7 @@ const MainLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const { token: { colorBgContainer } } = theme.useToken();
   const navigate = useNavigate();
+  const userRole = localStorage.getItem('role');
   return (
     <Layout>
       <Sider
@@ -52,18 +53,28 @@ const MainLayout = () => {
               icon: <UserOutlined />,
               label: 'Reservation',
             },
-            {
-              key: 'add-tutor',
-              icon: <VideoCameraOutlined />,
-              label: 'Add Tutor',
-            },
-            {
-              key: 'delete-tutor',
-              icon: <VideoCameraOutlined />,
-              label: 'Delete Tutor',
-            },
           ]}
         />
+        {userRole === 'admin' && (
+          <Menu
+            theme="dark"
+            mode="inline"
+            defaultSelectedKeys={['1']}
+            onClick={({ key }) => navigate(key)}
+            items={[
+              {
+                key: 'add-tutor',
+                icon: <VideoCameraOutlined />,
+                label: 'Add Tutor',
+              },
+              {
+                key: 'delete-tutor',
+                icon: <VideoCameraOutlined />,
+                label: 'Delete Tutor',
+              },
+            ]}
+          />
+        )}
         <div
           className={`absolute bottom-5 w-full ${collapsed
             ? 'hidden'
