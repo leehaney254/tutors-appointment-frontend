@@ -6,8 +6,9 @@
 - [📖 Tutors Appointment Frontend ](#-tutors-appointment-frontend-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
-    - [Key Features ](#key-features-)
+    - [Back-end ](#back-end-)
   - [🚀 Live Demo .](#-live-demo-)
+    - [Key Features ](#key-features-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -45,16 +46,10 @@ This project was build using React and Redux
   </ul>
 </details>
 
+### Back-end <a name="Front end"></a>
+The apps back-end can be found [here.](https://github.com/leehaney254/tutors-appointment-backend)
 
-<!-- Features -->
-
-### Key Features <a name="key-features"></a>
-
-> Features in this project
-
-- **[Rating Section]**
-- **[Search section]**
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
@@ -63,6 +58,14 @@ This project was build using React and Redux
 - [Live Demo Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+> Features in this project
+
+- **[Rating Section]**
+- **[Search section]**
 
 <!-- GETTING STARTED -->
 
