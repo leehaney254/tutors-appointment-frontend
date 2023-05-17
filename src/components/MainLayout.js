@@ -21,10 +21,12 @@ const MainLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const { token: { colorBgContainer } } = theme.useToken();
   const navigate = useNavigate();
+  const userRole = localStorage.getItem('role');
   const deleteData = () => {
     window.localStorage.removeItem('token');
     window.localStorage.removeItem('userId');
     window.localStorage.removeItem('name');
+    window.localStorage.removeItem('role');
     navigate('/login');
   };
   return (
@@ -50,11 +52,6 @@ const MainLayout = () => {
               label: 'Home',
             },
             {
-              key: 'add-tutor',
-              icon: <VideoCameraOutlined />,
-              label: 'Add Tutor',
-            },
-            {
               key: 'reserve-tutor',
               icon: <UploadOutlined />,
               label: 'Reserve Tutor',
@@ -64,13 +61,28 @@ const MainLayout = () => {
               icon: <UserOutlined />,
               label: 'Reservation',
             },
-            {
-              key: 'delete-tutor',
-              icon: <VideoCameraOutlined />,
-              label: 'Delete Tutor',
-            },
           ]}
         />
+        {userRole === 'admin' && (
+          <Menu
+            theme="dark"
+            mode="inline"
+            defaultSelectedKeys={['1']}
+            onClick={({ key }) => navigate(key)}
+            items={[
+              {
+                key: 'add-tutor',
+                icon: <VideoCameraOutlined />,
+                label: 'Add Tutor',
+              },
+              {
+                key: 'delete-tutor',
+                icon: <VideoCameraOutlined />,
+                label: 'Delete Tutor',
+              },
+            ]}
+          />
+        )}
         <div
           className={`absolute bottom-5 w-full ${collapsed
             ? 'hidden'
