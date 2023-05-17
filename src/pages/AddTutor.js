@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
 import { createTutor } from '../features/TutorSlice';
 
@@ -13,7 +13,6 @@ const AddTutor = () => {
   });
 
   const dispatch = useDispatch();
-  const message = useSelector((state) => state.tutor.message);
 
   const {
     name, image, speciality, bio, price,
@@ -33,12 +32,21 @@ const AddTutor = () => {
       toast.error('Fields should not be empty');
     }
     dispatch(createTutor(inputData));
-    toast.success(message);
+    toast.success('Tutor added successfully');
+    setInputData({
+      name: '',
+      image: '',
+      speciality: '',
+      bio: '',
+      price: 0,
+    });
   };
 
   return (
-    <>
-      <form onSubmit={submitEventHandler}>
+    <div>
+      <h2 className="text-center">Add Tutor</h2>
+      <hr className="border-2 w-full mb-3" />
+      <form onSubmit={submitEventHandler} className="scale-x-75">
         <div className="mb-6">
           <label
             htmlFor="name"
@@ -132,7 +140,7 @@ const AddTutor = () => {
           Create Tutor
         </button>
       </form>
-    </>
+    </div>
   );
 };
 

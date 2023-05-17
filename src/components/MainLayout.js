@@ -21,10 +21,12 @@ const MainLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const { token: { colorBgContainer } } = theme.useToken();
   const navigate = useNavigate();
+  const userRole = localStorage.getItem('role');
   const deleteData = () => {
     window.localStorage.removeItem('token');
     window.localStorage.removeItem('userId');
     window.localStorage.removeItem('name');
+    window.localStorage.removeItem('role');
     navigate('/login');
   };
   return (
@@ -33,10 +35,10 @@ const MainLayout = () => {
         trigger={null}
         collapsible
         collapsed={collapsed}
-        className="bg-slate-200"
+        className="bg-slate-300"
       >
         <div className="logo flex justify-start items-center">
-          <img src={Logo} alt="logo" className="w-24 h-24" />
+          <img src={Logo} alt="logo" className="w-24 h-24 hero" />
         </div>
         <Menu
           theme="dark"
@@ -50,11 +52,6 @@ const MainLayout = () => {
               label: 'Home',
             },
             {
-              key: 'add-tutor',
-              icon: <VideoCameraOutlined />,
-              label: 'Add Tutor',
-            },
-            {
               key: 'reserve-tutor',
               icon: <UploadOutlined />,
               label: 'Reserve Tutor',
@@ -64,17 +61,30 @@ const MainLayout = () => {
               icon: <UserOutlined />,
               label: 'Reservation',
             },
-            {
-              key: 'delete-tutor',
-              icon: <VideoCameraOutlined />,
-              label: 'Delete Tutor',
-            },
           ]}
         />
+        {userRole === 'admin' && (
+          <Menu
+            theme="dark"
+            mode="inline"
+            defaultSelectedKeys={['1']}
+            onClick={({ key }) => navigate(key)}
+            items={[
+              {
+                key: 'add-tutor',
+                icon: <VideoCameraOutlined />,
+                label: 'Add Tutor',
+              },
+              {
+                key: 'delete-tutor',
+                icon: <VideoCameraOutlined />,
+                label: 'Delete Tutor',
+              },
+            ]}
+          />
+        )}
         <div
-          className={`absolute bottom-5 w-full ${collapsed
-            ? 'hidden'
-            : 'flex'}`}
+          className={`absolute bottom-5 w-full ${!collapsed ? 'flex justify-center items-center' : 'md:hidden'}`}
         >
           <Menu
             className="flex w-full justify-center items-center md:flex-row flex-col  "

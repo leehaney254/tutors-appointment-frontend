@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTutor } from '../features/SingleTutorSlice';
 import TutorCard from '../components/TutorCard';
+import Loader from '../components/Loader';
 
 const Tutor = () => {
   const { id } = useParams();
@@ -15,7 +16,7 @@ const Tutor = () => {
   }, [dispatch, id]);
 
   if (loading) {
-    return <div className="text-center mt-4">Loading...</div>;
+    return <div className="flex justify-center min-h-[60vh] items-center"><Loader /></div>;
   }
 
   return (
