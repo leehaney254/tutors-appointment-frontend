@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
 import { loginUser } from '../../features/LoginSlice';
 
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const loginData = useSelector((state) => state.login);
   const [data, setData] = useState({
     name: '',
     password: '',
@@ -24,11 +23,10 @@ const Login = () => {
 
     if (name === '' || password === '') {
       toast.error('Please fill all the fields');
-      return;
     } else {
       const response = await dispatch(loginUser(data));
 
-      if (response.type == 'login/loginUser/fulfilled') {
+      if (response.type === 'login/loginUser/fulfilled') {
         toast.success("You're logged in successfully");
         navigate('/');
         setData({
