@@ -177,7 +177,7 @@ If you like this project kindly leave a ⭐ and reach us through our social medi
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-We would like to thank microverse and the whole team for the support they provided during project development
+We would like to thank microverse and the whole team for the support they provided during project development. I would also like to thank [Murat Korkmaz](https://www.behance.net/muratk) for the great designs.
 
 
 
