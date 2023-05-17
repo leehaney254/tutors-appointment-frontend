@@ -55,7 +55,7 @@ const TutorCard = ({
             type="button"
             className="mt-4 bg-green-600 hover:bg-green-800 text-white px-4 py-2 rounded-md text-lg"
           >
-            Reservation
+            Reserve
           </button>
         </div>
       </div>

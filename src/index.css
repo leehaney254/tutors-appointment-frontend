@@ -101,3 +101,9 @@ code {
   }
 }
 
+
+.my-scroll{
+  scroll-behavior: smooth !important;
+  scrollbar-arrow-color: blue;
+}
+
