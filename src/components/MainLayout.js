@@ -15,12 +15,22 @@ import {
 } from 'react-icons/bs';
 import Logo from '../assets/logo1.png';
 
+const mytoken = window.localStorage.getItem('token');
 const { Header, Sider, Content } = Layout;
 const MainLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const { token: { colorBgContainer } } = theme.useToken();
   const navigate = useNavigate();
+<<<<<<< HEAD
   const userRole = localStorage.getItem('role');
+=======
+  const deleteData = () => {
+    window.localStorage.removeItem('token');
+    window.localStorage.removeItem('userId');
+    window.localStorage.removeItem('name');
+    navigate('/login');
+  };
+>>>>>>> development
   return (
     <Layout>
       <Sider
@@ -110,14 +120,24 @@ const MainLayout = () => {
             ]}
           />
         </div>
+        <div className="scale-50 flex justify-center items-center absolute bottom-0 w-full">
+          {
+            mytoken ? (
+              <button onClick={deleteData} type="submit" className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded">
+                Logout
+              </button>
+            ) : (
+              <button type="button" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                Login
+              </button>
+            )
+          }
+
+        </div>
         <div
           className={`absolute bottom-2 w-full justify-center items-center left-3 
           ${collapsed ? 'hidden' : 'flex'}`}
-        >
-          <span className="text-center text-black">
-            @2023 copy rights reserved
-          </span>
-        </div>
+        />
       </Sider>
       <Layout>
         <Header
