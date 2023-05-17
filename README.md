@@ -92,6 +92,8 @@ To get a local copy up and running, follow these steps.
 - Clone the backend and run it.
 - run `npm start` to start your app
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Prerequisites
 
 In order to run this project you need:
@@ -99,22 +101,18 @@ In order to run this project you need:
 - A browser
 - Install Nodejs
 
-
-```sh
- npm start
-```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Setup
 
 Clone this repository to your desired folder:
-
-
-
+- Create a local directory where you can clone the project
+- Clone the project to your directory by running
 ```sh
   git clone https://github.com/leehaney254/tutors-appointment-frontend.git
 ```
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Install
 
