@@ -39,7 +39,9 @@ This project was build using React and Redux
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">Rails</a></li>
+    <li><a href="https://legacy.reactjs.org/docs/getting-started.html">React</a></li>
+    <li><a href="https://v2.tailwindcss.com/docs">Tailwind</a></li>
+    <li><a href="https://redux-toolkit.js.org/">Redux</a></li>
   </ul>
 </details>
 
