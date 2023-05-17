@@ -13,12 +13,8 @@
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
-    - [Install](#install)
     - [Usage](#usage)
-    - [Deployment](#deployment)
-  - [👥Josphat Kiploman](#josphat-kiploman)
-  - [👥Josphat Kiploman](#josphat-kiploman-1)
-  - [👥Josphat Kiploman](#josphat-kiploman-2)
+  - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -114,46 +110,19 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Install
-
-Install this project with:
-
-
-
-```sh
-  cd tutors-appointment-frontend
-  code .
-```
-
-
 ### Usage
 
 To run the project, execute the following command:
-
-
 
 ```sh
   npm start
 ```
 
-
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
-## 👥<a name="authors">Josphat Kiploman</a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Josphat Kiploman**
 
@@ -161,21 +130,17 @@ Example:
 - Twitter: [@twitter](https://twitter.com/josphatloman)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/josphat205)
 
-## 👥<a name="authors">Josphat Kiploman</a>
+👤 **Hassan EL OUARDY**
 
-👤 **Josphat Kiploman**
+- GitHub: [@codehass](https://github.com/codehass)
+- Twitter: [@hassanelourdy](https://twitter.com/hassanelourdy)
+- LinkedIn: [Hassan El OUARDY](https://www.linkedin.com/in/hassan-el-ouardy-360b99169/)
 
-- GitHub: [@github](https://github.com/Josphat205)
-- Twitter: [@twitter](https://twitter.com/josphatloman)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/josphat205)
+👤 **Leehaney George**
 
-## 👥<a name="authors">Josphat Kiploman</a>
-
-👤 **Josphat Kiploman**
-
-- GitHub: [@github](https://github.com/Josphat205)
-- Twitter: [@twitter](https://twitter.com/josphatloman)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/josphat205)
+- GitHub: [@githubhandle](https://github.com/leehaney254)
+- Twitter: [@twitterhandle](https://twitter.com/Lee06785586)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/leehaney-george-0a4a51178/)
 
 <!-- FUTURE FEATURES -->
 
