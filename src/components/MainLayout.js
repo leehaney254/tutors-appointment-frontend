@@ -43,11 +43,6 @@ const MainLayout = () => {
               label: 'Home',
             },
             {
-              key: 'add-tutor',
-              icon: <VideoCameraOutlined />,
-              label: 'Add Tutor',
-            },
-            {
               key: 'reserve-tutor',
               icon: <UploadOutlined />,
               label: 'Reserve Tutor',
@@ -58,14 +53,14 @@ const MainLayout = () => {
               label: 'Reservation',
             },
             {
+              key: 'add-tutor',
+              icon: <VideoCameraOutlined />,
+              label: 'Add Tutor',
+            },
+            {
               key: 'delete-tutor',
               icon: <VideoCameraOutlined />,
               label: 'Delete Tutor',
-            },
-            {
-              key: 'type-reserve',
-              icon: <UploadOutlined />,
-              label: 'Type Reserve',
             },
           ]}
         />
