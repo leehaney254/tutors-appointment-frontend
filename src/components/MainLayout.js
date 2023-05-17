@@ -109,13 +109,13 @@ const MainLayout = () => {
                 key: 'linkedin',
                 icon: <BsLinkedin />,
                 label: 'Linkedin',
-                link: '',
+                link: 'https://www.linkedin.com/',
               },
               {
                 key: 'whatapp',
                 icon: <BsWhatsapp />,
                 label: 'Whatapp,',
-                link: '',
+                link: 'https://web.whatsapp.com/',
               },
             ]}
           />
