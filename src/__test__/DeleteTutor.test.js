@@ -11,7 +11,7 @@ it('should render AddTutor page', () => {
       <Provider store={store}>
         <DeleteTutor />
       </Provider>
-    </BrowserRouter>
+    </BrowserRouter>,
   );
   expect(deleteTutor).toMatchSnapshot();
 });

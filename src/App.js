@@ -9,7 +9,6 @@ import Reservation from './pages/Reservation';
 import DeleteTutor from './pages/DeleteTutor';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
-import ReserveTutor from './pages/ReserveTutor';
 import PrivateRouting from './components/PrivateRouting';
 import NotFound from './pages/NotFound';
 import Tutor from './pages/Tutor';
@@ -36,7 +35,6 @@ function App() {
           <Route path="/reserve-tutor" element={<ReserveForm />} />
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/delete-tutor" element={<DeleteTutor />} />
-          <Route path="/type-reserve" element={<ReserveTutor />} />
         </Route>
       </Routes>
     </div>
