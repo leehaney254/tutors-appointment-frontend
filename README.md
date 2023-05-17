@@ -124,6 +124,7 @@ To run the tests, execute the following command:
 ```sh
   npm test
 ```
+NB: To run the tests successfully make sure you have connected the front-end to the backend
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
