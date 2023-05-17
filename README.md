@@ -8,6 +8,7 @@
     - [Tech Stack ](#tech-stack-)
     - [Back-end ](#back-end-)
   - [🚀 Live Demo .](#-live-demo-)
+    - [Loom Video ](#loom-video-)
     - [Key Features ](#key-features-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
@@ -46,6 +47,8 @@ This project was build using React and Redux
   </ul>
 </details>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Back-end <a name="Front end"></a>
 The apps back-end can be found [here.](https://github.com/leehaney254/tutors-appointment-backend)
 
@@ -60,12 +63,21 @@ The apps back-end can be found [here.](https://github.com/leehaney254/tutors-app
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- Features -->
 
+### Loom Video <a name="Loom Video"></a>
+The loom video can be found [here]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Key Features <a name="key-features"></a>
 
 > Features in this project
 
-- **[Rating Section]**
-- **[Search section]**
+- **Login**
+- **Signup**
+- **Create tutors**
+- **Create reservations**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -73,6 +85,12 @@ The apps back-end can be found [here.](https://github.com/leehaney254/tutors-app
 
 
 To get a local copy up and running, follow these steps.
+- Create a local directory where you can clone the project
+- Clone the project to your directory by running
+  - `git clone https://github.com/leehaney254/tutors-appointment-frontend.git`
+- Run `npm install`
+- Clone the backend and run it.
+- run `npm start` to start your app
 
 ### Prerequisites
 
