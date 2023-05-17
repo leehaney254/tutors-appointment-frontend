@@ -66,7 +66,7 @@ The loom video can be found [here]()
 
 ### Key Features <a name="key-features"></a>
 
-> Features in this project
+Features in this project
 
 - **Login**
 - **Signup**
@@ -83,8 +83,13 @@ The loom video can be found [here]()
 To get a local copy up and running, follow these steps.
 - Create a local directory where you can clone the project
 - Clone the project to your directory by running
-  - `git clone https://github.com/leehaney254/tutors-appointment-frontend.git`
-- Run `npm install`
+```sh
+git clone https://github.com/leehaney254/tutors-appointment-frontend.git
+```
+- Run 
+```sh 
+npm install
+```
 - Clone the backend and run it.
 - run `npm start` to start your app
 
