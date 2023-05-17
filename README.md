@@ -1,18 +1,31 @@
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
+<!-- TABLE OF CONTENTS -->
 
-  <h3><b>Tutors Appointment app </b></h3>
+# 📗 Table of Contents
 
-</div>
-
-
-
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Tutors Appointment Frontend ](#-tutors-appointment-frontend-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo .](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Deployment](#deployment)
+  - [👥Josphat Kiploman](#josphat-kiploman)
+  - [👥Josphat Kiploman](#josphat-kiploman-1)
+  - [👥Josphat Kiploman](#josphat-kiploman-2)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Tutors-appointment-app] <a name="about-project"></a>
+# 📖 Tutors Appointment Frontend <a name="about-project"></a>
 
 
 **[Tutors-appointment-app]** A tutor's appointment app is a web application designed to facilitate the scheduling and management of tutoring sessions between tutors and students. It serves as a platform for tutors and students to connect, coordinate, and keep track of their tutoring appointments.
