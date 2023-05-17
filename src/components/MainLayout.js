@@ -21,16 +21,14 @@ const MainLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const { token: { colorBgContainer } } = theme.useToken();
   const navigate = useNavigate();
-<<<<<<< HEAD
   const userRole = localStorage.getItem('role');
-=======
   const deleteData = () => {
     window.localStorage.removeItem('token');
     window.localStorage.removeItem('userId');
     window.localStorage.removeItem('name');
+    window.localStorage.removeItem('role');
     navigate('/login');
   };
->>>>>>> development
   return (
     <Layout>
       <Sider

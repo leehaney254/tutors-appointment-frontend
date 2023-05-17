@@ -21,4 +21,5 @@ const CardFeature = ({
     </Link>
   </div>
 );
+
 export default CardFeature;
