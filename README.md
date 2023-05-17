@@ -142,6 +142,8 @@ To run the project, execute the following command:
 - Twitter: [@twitterhandle](https://twitter.com/Lee06785586)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/leehaney-george-0a4a51178/)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
@@ -167,7 +169,7 @@ Feel free to check the [issues page](../../issues/).
 ## ⭐️ Show your support <a name="support"></a>
 
 
-If you like this project you can support me by reaching me through my social media links above
+If you like this project kindly leave a ⭐ and reach us through our social media links above.
 
 
 <!-- ACKNOWLEDGEMENTS -->
