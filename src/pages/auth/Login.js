@@ -1,32 +1,44 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import toast from 'react-hot-toast';
-import { useDispatch } from 'react-redux';
 import { loginUser } from '../../features/LoginSlice';
 
 const Login = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const loginData = useSelector((state) => state.login);
   const [data, setData] = useState({
     name: '',
     password: '',
   });
   const { name, password } = data;
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (name === '' || password === '') {
       toast.error('Please fill all the fields');
+      return;
+    } else {
+      const response = await dispatch(loginUser(data));
+
+      if (response.type == 'login/loginUser/fulfilled') {
+        toast.success("You're logged in successfully");
+        navigate('/');
+        setData({
+          name: '',
+          password: '',
+        });
+      } else {
+        toast.error('Login failed');
+      }
     }
-    dispatch(loginUser(data));
-    toast.success("You're login successfully");
-    setData({
-      name: '',
-      password: '',
-    });
   };
 
   return (
@@ -35,7 +47,7 @@ const Login = () => {
         <h3 className="text-2xl font-semibold text-center text-green-500 underline uppercase decoration-wavy">
           Login form
         </h3>
-        <form className="mt-6">
+        <form className="mt-6" onSubmit={handleSubmit}>
           <div className="mb-2">
             <label
               htmlFor="name"
@@ -70,7 +82,6 @@ const Login = () => {
           </div>
           <div className="mt-6">
             <button
-              onClick={handleSubmit}
               type="submit"
               className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-green-500 rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600"
             >
