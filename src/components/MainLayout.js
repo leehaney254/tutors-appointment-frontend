@@ -91,7 +91,7 @@ const MainLayout = () => {
             theme="dark"
             mode="inline"
             defaultSelectedKeys={['1']}
-            onClick={({ key }) => navigate(key)}
+            onClick={({ link }) => navigate(link)}
             items={[
               {
                 key: 'facebook',
