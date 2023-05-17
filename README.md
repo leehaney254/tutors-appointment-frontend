@@ -53,7 +53,7 @@ The apps back-end can be found [here.](https://github.com/leehaney254/tutors-app
 
 ## 🚀 Live Demo <a name="live-demo"></a>.
 
-- [Live Demo Link]()
+- [Live Demo Link](https://starlit-syrniki-d3f2fe.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- Features -->
@@ -124,6 +124,7 @@ To run the tests, execute the following command:
 ```sh
   npm test
 ```
+NB: To run the tests successfully make sure you have connected the front-end to the backend
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

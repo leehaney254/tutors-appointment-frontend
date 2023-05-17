@@ -96,21 +96,25 @@ const MainLayout = () => {
                 key: 'facebook',
                 icon: <BsFacebook />,
                 label: 'Fb',
+                link: 'https://web.facebook.com/',
               },
               {
                 key: 'twitter',
                 icon: <BsTwitter />,
                 label: 'Twitter',
+                link: 'https://twitter.com/',
               },
               {
                 key: 'linkedin',
                 icon: <BsLinkedin />,
                 label: 'Linkedin',
+                link: 'https://www.linkedin.com/',
               },
               {
                 key: 'whatapp',
                 icon: <BsWhatsapp />,
                 label: 'Whatapp,',
+                link: 'https://web.whatsapp.com/',
               },
             ]}
           />
