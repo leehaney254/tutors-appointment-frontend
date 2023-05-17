@@ -163,6 +163,7 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- SUPPORT -->
 
@@ -171,6 +172,7 @@ Feel free to check the [issues page](../../issues/).
 
 If you like this project kindly leave a ⭐ and reach us through our social media links above.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -179,8 +181,7 @@ If you like this project kindly leave a ⭐ and reach us through our social medi
 
 We would like to thank microverse and the whole team for the support they provided during project development. I would also like to thank [Murat Korkmaz](https://www.behance.net/muratk) for the great designs.
 
-
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
@@ -188,6 +189,5 @@ We would like to thank microverse and the whole team for the support they provid
 
 This project is [MIT](LICENSE.txt) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
