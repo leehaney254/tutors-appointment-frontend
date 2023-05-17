@@ -3,7 +3,8 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import store from '../app/store';
-import ReserveForm from '../pages/ReserveForm'
+import ReserveForm from '../pages/ReserveForm';
+
 it('should render Reservation page', () => {
   const reserveForm = render(
     <BrowserRouter>
