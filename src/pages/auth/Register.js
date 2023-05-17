@@ -23,9 +23,11 @@ const Register = () => {
     e.preventDefault();
     if (name === '' || password === '' || cpassword === '') {
       toast.error('Please fill all the fields');
+      return;
     }
     if (password !== cpassword) {
       toast.error('Password does not match');
+      return;
     }
     const finalData = {
       name,
