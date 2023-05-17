@@ -9,7 +9,7 @@ const Reservation = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(reservedTutors(user_id));
-  }, []);
+  }, [dispatch, user_id]);
 
   const ReservationData = useSelector((state) => state.reservedTutor);
   return (
