@@ -177,7 +177,7 @@ If you like this project kindly leave a ⭐ and reach us through our social medi
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank microverse and my group members for the support they gave me during project development
+We would like to thank microverse and the whole team for the support they provided during project development
 
 
 
