@@ -91,7 +91,6 @@ const MainLayout = () => {
             theme="dark"
             mode="inline"
             defaultSelectedKeys={['1']}
-            onClick={({ key }) => navigate(key)}
             items={[
               {
                 key: 'facebook',
@@ -116,7 +115,7 @@ const MainLayout = () => {
             ]}
           />
         </div>
-        <div className="scale-50 flex justify-center items-center absolute bottom-0 w-full">
+        <div className="scale-75 flex justify-center items-center absolute bottom-0 w-full">
           {
             mytoken ? (
               <button onClick={deleteData} type="submit" className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded">
