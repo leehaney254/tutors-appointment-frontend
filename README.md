@@ -55,6 +55,9 @@ The apps back-end can be found [here.](https://github.com/leehaney254/tutors-app
 
 - [Live Demo Link](https://starlit-syrniki-d3f2fe.netlify.app/)
 
+  - To login as an administrator in hosting app use:
+    - username : Administrator1
+    - password : admin123
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- Features -->
 

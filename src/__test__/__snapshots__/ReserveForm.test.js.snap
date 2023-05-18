@@ -67,7 +67,7 @@ Object {
             <input
               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500 dark:shadow-sm-light"
               id="date"
-              min="2023-05-17"
+              min="2023-05-18"
               name="date"
               required=""
               type="date"
@@ -147,7 +147,7 @@ Object {
           <input
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500 dark:shadow-sm-light"
             id="date"
-            min="2023-05-17"
+            min="2023-05-18"
             name="date"
             required=""
             type="date"
